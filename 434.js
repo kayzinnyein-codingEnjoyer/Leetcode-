@@ -1,4 +1,4 @@
-<!-- 
+/* 
 Given a string s, return the number of segments in the string.
 
 A segment is defined to be a contiguous sequence of non-space characters.
@@ -20,23 +20,17 @@ Constraints:
 
 0 <= s.length <= 300
 s consists of lowercase and uppercase English letters, digits, or one of the following characters "!@#$%^&*()_+-=',.:".
-The only space character in s is ' '. 
--->
+The only space character in s is ' '.
+*/
 
 
 
-<!DOCTYPE html>git 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        let s = '                 ';
-        let ans = s.split(' ').filter((a) => a !== "").length;
-        console.log(ans);
-    </script>
-</body>
-</html>
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countSegments = function(s) {
+    let res = s.split(' ').filter(a => a !== '').length;
+    return res;
+};
